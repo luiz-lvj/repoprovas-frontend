@@ -30,7 +30,7 @@ export default function ListProfessors(){
                 <h2>Professores</h2>
                 {loading ? <><br/><br/><br/><p>Carregando professores...</p></> : ""}
                 {professors.map((professor, idx) => {
-                    return<SmallCardProfessor key={idx} profId={professor.id} profName={professor.name}/>
+                    return<SmallCardProfessor key={idx} profId={professor.id} profName={professor.name} numTests={professor.tests}/>
                 })}
             </SmallCardList>
         </HomeStyle>

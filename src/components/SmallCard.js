@@ -7,6 +7,7 @@ export const SmallCardStyle = styled.li`
     border-radius: 6px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;

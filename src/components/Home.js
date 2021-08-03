@@ -8,14 +8,18 @@ export default function Home(){
         <HomeStyle>
             <Title/>
             <Card>
+                <ButtonStyled onClick={() => history.push("/newtest")}
+                >Cadastrar nova prova</ButtonStyled>
+            </Card>
+            <Card>
                 <ButtonStyled>Visualizar a lista de provas</ButtonStyled>
             </Card>
             <Card>
                 <ButtonStyled>Visualizar a lista de disciplinas</ButtonStyled>
             </Card>
             <Card>
-                <ButtonStyled
-                onClick={() => history.push("/professors")}>Visualizar a lista de professores</ButtonStyled>
+                <ButtonStyled onClick={() => history.push("/professors")}
+                >Visualizar a lista de professores</ButtonStyled>
             </Card>
         </HomeStyle>
     );
@@ -46,6 +50,11 @@ export const Card = styled.div`
         font-size: 30px;
         font: Arial;
         font-weight: bold;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 `;
 

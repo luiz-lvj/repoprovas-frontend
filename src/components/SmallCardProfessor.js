@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { SmallCardStyle } from "./SmallCard";
 
-export default function SmallCardProfessor({profId, profName}){
+export default function SmallCardProfessor({profId, profName,numTests}){
     const history = useHistory();
     if(!profId || !profName){
         history.push("/");
@@ -9,7 +9,8 @@ export default function SmallCardProfessor({profId, profName}){
     }
     return(
         <SmallCardStyle>
-            <h3>{profName}</h3> 
+            <h3>{profName}</h3>
+            <p>{numTests} provas</p>
         </SmallCardStyle>
     );
 }
