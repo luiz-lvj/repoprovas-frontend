@@ -12,10 +12,12 @@ export default function Home(){
                 >Cadastrar nova prova</ButtonStyled>
             </Card>
             <Card>
-                <ButtonStyled>Visualizar a lista de provas</ButtonStyled>
+                <ButtonStyled onClick={() => history.push("/tests")}
+                >Visualizar a lista de provas</ButtonStyled>
             </Card>
             <Card>
-                <ButtonStyled>Visualizar a lista de disciplinas</ButtonStyled>
+                <ButtonStyled onClick={() => history.push("/subjects")}
+                >Visualizar a lista de disciplinas</ButtonStyled>
             </Card>
             <Card>
                 <ButtonStyled onClick={() => history.push("/professors")}

@@ -1,9 +1,9 @@
 import { useHistory } from "react-router-dom";
 import { SmallCardStyle } from "./SmallCard";
 
-export default function SmallCardProfessor({profId, profName,numTests}){
+export default function SmallCardSubject({subjectId, subjectName,numTests}){
     const history = useHistory();
-    if(!profId || !profName){
+    if(!subjectId || !subjectName){
         history.push("/");
         return "";
     }
@@ -12,13 +12,13 @@ export default function SmallCardProfessor({profId, profName,numTests}){
             alert("Não há provas cadastradas!")
             return;
         }
-        history.push(`professorpage/${profId}`)
+        history.push(`subjectpage/${subjectId}`)
     }
     return(
         <SmallCardStyle>
             <h3
             onClick={redirectToPage}
-            >{profName}</h3>
+            >{subjectName}</h3>
             <p>{numTests} provas</p>
         </SmallCardStyle>
     );

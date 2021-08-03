@@ -3,6 +3,10 @@ import GlobalStyle from "./components/utils/GlobalStyle";
 import Home from "./components/Home";
 import ListProfessors from "./components/ListProfessors";
 import AddTest from "./components/AddTest";
+import ProfessorPage from "./components/ProfessorPage";
+import TestsPage from "./components/TestsPage";
+import ListSubjects from "./components/ListSubjects";
+import SubjectPage from "./components/SubjectPage";
 
 export default function App() {
   return (
@@ -15,8 +19,20 @@ export default function App() {
           <Route path="/professors" exact>
             <ListProfessors/>
           </Route>
+          <Route path="/subjects" exact>
+            <ListSubjects/>
+          </Route>
           <Route path="/newtest" exact>
             <AddTest/>
+          </Route>
+          <Route path="/professorpage/:profId" exact>
+            <ProfessorPage/>
+          </Route>
+          <Route path="/subjectpage/:subjectId" exact>
+            <SubjectPage/>
+          </Route>
+          <Route path="/tests" exact>
+            <TestsPage/>
           </Route>
       </Switch> 
     </BrowserRouter>
