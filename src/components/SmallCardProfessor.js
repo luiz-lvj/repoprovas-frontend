@@ -9,7 +9,7 @@ export default function SmallCardProfessor({profId, profName}){
     }
     return(
         <SmallCardStyle>
-            <h3>{profName}</h3>
+            <h3>{profName}</h3> 
         </SmallCardStyle>
     );
 }
