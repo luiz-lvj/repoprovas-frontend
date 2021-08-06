@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom"
+import styled from "styled-components";
 import { HomeStyle } from "./Home";
 import { SmallCardList } from "./SmallCard";
 import SmallCardTest from "./SmallCardTest";
@@ -25,15 +26,20 @@ export default function SubjectPage(){
         })
     }, []);
 
+
     return(
         <HomeStyle>
             <Title/>
             <SmallCardList>
                 {tests.length >= 0 ? <h2>Provas cadastradas</h2>: ""}
+                <br/>
+                <SortButton onClick={() => history.push(`/sortedsubject/${subjectId}`)}>Ver as provas por categorias</SortButton>
+                <br/>
                 {loading ? <><br/><br/><br/><p>Carregando Provas...</p></>:""}
                 {tests.map((test, idx) => {
                     return(
                         <SmallCardTest
+                        key={idx}
                         id={test.id}
                         name={test.name}
                         link={test.link}
@@ -48,3 +54,15 @@ export default function SubjectPage(){
         </HomeStyle>
     );
 }
+
+const SortButton = styled.button`
+    border: none;
+    background: blueviolet;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 17px;
+    height: 50px;
+    width: 40%;
+    border-radius: 10px;
+    cursor: pointer;
+`;

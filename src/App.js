@@ -7,6 +7,7 @@ import ProfessorPage from "./components/ProfessorPage";
 import TestsPage from "./components/TestsPage";
 import ListSubjects from "./components/ListSubjects";
 import SubjectPage from "./components/SubjectPage";
+import SortedSubjectTests from "./components/SortedSubjectTests";
 
 export default function App() {
   return (
@@ -27,6 +28,9 @@ export default function App() {
           </Route>
           <Route path="/professorpage/:profId" exact>
             <ProfessorPage/>
+          </Route>
+          <Route path="/sortedsubject/:subjectId" exact>
+            <SortedSubjectTests/>
           </Route>
           <Route path="/subjectpage/:subjectId" exact>
             <SubjectPage/>
